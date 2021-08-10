@@ -2,42 +2,43 @@
 <html lang="en">
     <head>
         <title>Email sending form</title>
-        <script src="popup.js"></script>
-</head>
-<body>
-    <form>
-        <div>
-            <label for="firstname">Firstname: </label>
-            <input id="firstname" required/>
-        </div>
-        <div>
-            <label for="name">Name: </label>
-            <input id="name" required/>
-        </div>
-        <div>
-            <label for="age">Age: </label>
-            <input id="age" type="number" required/>
-        </div>
-        <div>
-            <label for="phone">Phone: </label>
-            <input id="phone" type="tel" required/>
-        </div>
-        <div>
-            <label for="email">Email: </label>
-            <input id="email" type="email" required/>
-        </div>
-        <div>
-            <label for="student">Student at 42?: </label>
-            <input id="student" type="checkbox" />
-        </div>
-        <div>
-            <input id="gender_male" name="gender" value="Male" type="radio" checked>Male</input>
-            <input id="gender_female" name="gender" value="Female" type="radio" >Female</input>
-            <input id="gender_other" name="gender" value="Other" type="radio" >Other</input>
-        </div>
-        <button type="submit" onclick="displayFormContents()">
-            submit!
-        </button>
-    </form>
-</body>
+        <meta charset='UTF-8'>
+    </head>
+    <script src="popup.js"></script>
+    <body>
+        <form>
+            <div>
+                <label for="firstname">Firstname: </label>
+                <input id="firstname" required/>
+            </div>
+            <div>
+                <label for="name">Name: </label>
+                <input id="name" required/>
+            </div>
+            <div>
+                <label for="age">Age: </label>
+                <input id="age" type="number" required/>
+            </div>
+            <div>
+                <label for="phone">Phone: </label>
+                <input id="phone" type="tel" required/>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" type="email" required/>
+            </div>
+            <div>
+                <label for="student">Student at 42?: </label>
+                <input id="student" type="checkbox" />
+            </div>
+            <div>
+                <input id="gender_male" name="gender" value="Male" type="radio" checked>Male</input>
+                <input id="gender_female" name="gender" value="Female" type="radio" >Female</input>
+                <input id="gender_other" name="gender" value="Other" type="radio" >Other</input>
+            </div>
+            <button type="submit" onclick="displayFormContents()">
+                submit!
+            </button>
+        </form>
+    </body>
 </html>
