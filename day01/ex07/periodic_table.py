@@ -2,7 +2,6 @@ def parse_line(line):
     el = line.split("=")
     result = dict((value.strip().split(":") for value in el[1].split(", ")))
     result["name"] = el[0].strip()
-    print(result)
     return result
 
 
@@ -45,16 +44,15 @@ def html_declaration():
         </ul>
       </td>
 """
-
     return (HTML, TEMPLATE)
+
 
 def main():
     HTML, TEMPLATE = html_declaration()
     body = "<tr>"
 
     fd = open("periodic_table.txt", "r")
-    for line in fd.readlines():
-        periodic_table = parse_line(line)
+    periodic_table = [(parse_line(line)) for line in fd.readlines()]
     fd.close()
     position = 0
     for item in periodic_table:

@@ -27,12 +27,13 @@ def print_capital_city(parameter):
         "NJ": "Trenton",
         "CO": "Denver"
     }
-    value = get_value_by_key(states, capital_cities, parameter)
-    key = get_key_by_value(capital_cities, parameter)
+    titled_param = parameter.title()
+    value = get_value_by_key(states, capital_cities, titled_param)
+    key = get_key_by_value(capital_cities, titled_param)
     if value:
-        print(value, "is the capital of", parameter)
+        print(value, "is the capital of", titled_param)
     elif key:
-        print(parameter, "is the capital of", get_key_by_value(states, key))
+        print(titled_param, "is the capital of", get_key_by_value(states, key))
     else:
         print(parameter, "is neither a capital city nor a state")
 
@@ -43,7 +44,7 @@ def parse_argv(argv):
         arg = ' '.join(arg.split())
         if arg == "":
             continue
-        print_capital_city(arg.title())
+        print_capital_city(arg)
 
 
 def main():
